@@ -21,7 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: pictgram_production
-  username: pictgram
-  password: <%= ENV['PICTGRAM_DATABASE_PASSWORD'] %>
+  adapter: pg
+  database: db/production.pg
